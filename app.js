@@ -88,6 +88,15 @@ lineReader.on('close', function(){
         }
       }
     })
+    if(i === listStructure.length-1){
+      setTimeout(function(){
+        console.log("Meilleure optimisation trouvée:")
+        console.log((bestCombination.occ*bestCombination.lengthStruct)+" lignes concernées")
+        console.log(((bestCombination.occ-1)*bestCombination.lengthStruct)+" lignes gagnées")
+        console.log((bestCombination.occ-1)+" répétitions supprimées")
+        console.log("Structure: "+bestCombination.data)
+      },3000)
+    }
   }
 })
 
